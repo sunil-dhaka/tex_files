@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{commath}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{subcaption}
+\restylefloat{table}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{vmargin}  % Administrar márgenes
+\setpapersize{A4} % Definir tamaño del papel
+\setmargins{2.5cm} % Margen izquierdo
+{1cm} % Margen superior
+{16.5cm} % Área de impresión horizontal
+{23.42cm} % Area de impresión vertical
+{15mm} % Encabezado
+{5mm} % Espacio entre el encabezado y el texto
+{10pt} % Pie de página
+{3mm} % Espacio entre el pie de página y el texto
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+\includegraphics[width=4cm,height=1cm]{cropped-iitpal-at-prutor-logo.png}
+}
+\lhead{Circles | Class XI}
+\rfoot{}
+\begin{document}
+\section{Position of a point wrt Circle}
+To know whether a point in 2-D plane $(x_{1},y_{1})$ lies inside or outside of a circle, we can use general form of circle i.e. $x^2+y^2+2gx+2fy+c=0$:
+\begin{align*}
+    \text{if  } x_{1}^2+y_{1}^2+2gx_{1}+2fy_{1}+c<0 \implies \textbf{Inside}\\
+    \text{if  } x_{1}^2+y_{1}^2+2gx_{1}+2fy_{1}+c>0 \implies \textbf{Outside}\\
+    \text{if  } x_{1}^2+y_{1}^2+2gx_{1}+2fy_{1}+c=0 \implies \textbf{On Circle}
+\end{align*}
+\textbf{Note} that we just have to put value of $(x_{1},y_{1})$ and by its sign we know whether point is inside or outside or on circle.
+\section{Equation of Circle}
+For equation of a circle that passes through 3 non-collinear points, simply put values of points in general form of the circle. Suppose that points are $(x_{1},y_{1})$, $(x_{2},y_{2})$, and $(x_{3},y_{3})$. Since these points lie on the circle. So,
+\begin{align*}
+    x_{1}^2+y_{1}^2+2gx_{1}+2fy_{1}+c=0\\
+    x_{2}^2+y_{2}^2+2gx_{2}+2fy_{2}+c=0\\
+    x_{3}^2+y_{3}^2+2gx_{3}+2fy_{3}+c=0
+\end{align*}
+There are three equations and three unknowns. Simple algebra gives us values of $g,f,$ and $c$. Values are,
+\begin{equation*}
+    2g = \frac{[(x_1^2 – x_3^2)(y_1 – x_2) + (y_1^2 – y_3^2)(y_1 – y_2) + (x_2^2 – x_1^2)(y_1 – y_3) + (y_2^2 – y_1^2)(y_1 – y_3)]} { [(x_3 – x_1)(y_1 – y_2) – (x_2 – x_1)(y_1 – y_3)]}
+\end{equation*}
+\begin{equation*}
+    2f = \frac{[(x_1^2 – x_3^2)(x_1 – x_2) + (y_1^2 – y_3^2 )(x_1 – x_2) + (x_2^2 – x_1^2)(x_1 – x_3) + (y_2^2 – y_1^2)(x_1 – x_3)] }{[(y_3 – y_1)(x_1 – x_2) – (y_2 – y_1)(x_1 – x_3)]}
+\end{equation*}
+To get $c$ simply put values of $g$ and $f$ in,
+\begin{equation*}
+    c=-x_1^2-y_1^2-2gx_1-2fy_1
+\end{equation*}
+With the help of $g,f,c$ we can get center of circle i.e. $(-g,-f)$ and radius i.e. $\sqrt(g^2+f^2-c)$. Note that one can try to remember above formulas using the pattern that is in them.
+\end{document}
