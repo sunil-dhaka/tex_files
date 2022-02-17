@@ -1,0 +1,178 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{commath}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{subcaption}
+\restylefloat{table}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{vmargin}  % Administrar márgenes
+\setpapersize{A4} % Definir tamaño del papel
+\setmargins{3cm} % Margen izquierdo
+{1cm} % Margen superior
+{15cm} % Área de impresión horizontal
+{23.42cm} % Area de impresión vertical
+{15mm} % Encabezado
+{7mm} % Espacio entre el encabezado y el texto
+{10pt} % Pie de página
+{3mm} % Espacio entre el pie de página y el texto
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+\includegraphics[width=4cm,height=1cm]{cropped-iitpal-at-prutor-logo.png}
+}
+\lhead{Circles | Class XI | Exemplar Problems}
+\rfoot{}
+\begin{document}
+\section*{Practice Questions}
+\paragraph{Q1.}Find the equation of the circle which touches x-axis and whose centre is (1, 2).
+\begin{flushright}
+Page-202
+\end{flushright}
+\paragraph{Q2.}True/False: The point (1, 2) lies inside the circle $x^2 + y^2 - 2x + 6y + 1 = 0$.
+\begin{flushright}
+    Page-204
+\end{flushright}
+\paragraph{Q3.}Find the equation of the circle having (1, -2) as its centre and passing through $$3x + y = 14, 2x + 5y = 18$$
+\begin{flushright}
+    Page-202
+\end{flushright}
+\paragraph{Q4.}If one end of a diameter of the circle $x^2 + y^2 - 4x - 6y + 11 = 0$ is (3, 4), then find
+the coordinate of the other end of the diameter.
+\begin{flushright}
+    Page-202
+\end{flushright}
+\paragraph{Q5.}True/False: The line $x + 3y = 0$ is a diameter of the circle $x^2 + y^2 + 6x + 2y = 0$.
+\begin{flushright}
+    Page-204
+\end{flushright}
+\clearpage
+
+
+\section*{Solution and Hints}
+\paragraph{S1.}\
+Since the circle has a centre (1, 2) and also touches x-axis.
+
+Radius of the circle is, $r = 2$
+
+The equation of a circle having centre (h, k), having radius as r units, is
+
+$$(x - h)^2 + (y - k)^2 = r^2$$
+
+So, the equation of the required circle is:
+
+$$(x - 1)^2 + (y - 2)^2 = 2^2$$
+
+$$x^2 - 2x + 1 + y^2 - 4y + 4 = 4$$
+$$ x^2 + y^2 - 2x - 4y + 1 = 0$$
+
+The equation of the circle is $$x^2 + y^2 - 2x - 4y + 1 = 0$$.
+\paragraph{S2.}\
+Recall from lec-2 that we just simply have to put substitute coordinates in the circle equation. So,
+\begin{align*}
+    x^2 + y^2 - 2x + 6y + 1 = 1^2+2^2-2+6x2+1=16>0\\
+\end{align*} 
+Since value is positive, we can say that point is lies outside of the Circle. So it is a FALSE statement.
+\paragraph{S3.}\
+First don't get stressed that you have solved this problem in less page, I have just tried to give a detailed step wise solution; that is why it seems too lengthy.  Solving the given equations,
+
+$$3x + y = 14$$
+$$2x + 5y = 18$$
+
+Multiplying the first equation by 5, we get
+
+$$15x + 5y = 70$$
+$$2x + 5y = 18$$
+
+Subtract equations, we get $13 x = 52$. Therefore $x = 4$
+
+Substituting $x = 4,$ in first equation, we get
+
+$$3 (4) + y = 14$$
+
+$$y = 14 - 12 = 2$$
+
+So, the point of intersection is (4, 2).
+
+Since, the equation of a circle having centre (h, k), having radius as r units, is
+
+$$(x - h)^2 + (y - k)^2 = r^2$$
+
+Putting the values of (4, 2) and centre co-ordinates (1,-2) in the above expression, we get
+
+$$(4 - 1)^2 + (2 - (-2))^2 = r^2$$
+
+$$3^2 + 4^2 = r^2$$
+
+$$r^2 = 9 + 16 = 25$$
+
+$$r = 5$$ units
+
+So, the expression is
+
+$$(x - 1)^2 + (y - (-2))^2 = 5^2$$
+
+Expanding the above equation we get genreal form of circle
+
+$$x^2 - 2x + 1 + (y + 2)^2 = 25$$
+
+$$x^2 - 2x + 1 + y^2 + 4y + 4 = 25$$
+
+$$x^2 - 2x + y^2 + 4y - 20 = 0$$
+
+Hence the required expression is $$x^2 - 2x + y^2 + 4y - 20 = 0.$$
+\paragraph{S4.}\
+Given equation of the circle, we first convert it into center-radius form to get center of the circle, or one can simply use center result from genreal form of circle.
+
+$$x^2 - 4x + y^2 - 6y + 11 = 0$$
+
+$$x^2 - 4x + 4 + y^2 - 6y + 9 +11 - 13 = 0$$
+
+the above equation can be written as
+
+$$x^2 - 2 (2) x + 2^2 + y^2 - 2 (3) y + 3^2 +11 - 13 = 0$$
+
+on simplifying we get
+$$(x - 2)^2 + (y - 3)^2 = 2$$
+
+$$(x - 2)^2 + (y - 3)^2 = (\sqrt{2})^2$$
+
+Since, the equation of a circle having centre $(h, k)$, having radius as r units, is
+
+$$(x - h)^2 + (y - k)^2 = r^2$$
+
+We have centre = (2, 3)
+
+The centre point is the mid-point of the two ends of the diameter of a circle.
+
+Let the points be (p, q). So,
+\begin{align*}
+    \frac{p+3}{2}&=2\\
+    \frac{q+4}{2}&=3
+\end{align*}
+
+by solveing above we get,$p = 1$ and $q = 2$
+
+Hence, the other ends of the diameter are (1, 2).
+\paragraph{S5.}\
+For given line to be a diameter of the circle, it has to have intersection on two points and those points should have distance equal to $2r$. Recall from notes that to have two intersection point, quadratic equation in one variable has to have two real roots. Put $x=-3y$ in circle equation,
+\begin{align*}
+    9y^2+y^2-18y+2y=0\\
+    10y^2-16y=0\\
+    y(y-\frac{8}{5})=0
+\end{align*}
+Put values of $y$ in $x=-3y$, and we get two intersection points as: $(0,0)$ and $(\frac{-24}{5},\frac{8}{5})$. And distance between them,
+\begin{equation*}
+    2r=\sqrt{\frac{(24)^2+(8)^2}{5^2}}=\sqrt{25.6}=5.05
+\end{equation*}
+And from genreal form of circle we get $2r=2\sqrt{g^2+f^2-c}=2\sqrt{10}2x3.16=6.32$. It is clear that intersection points of line with circle makes a secant rather than a diameter. So it a FALSE statement.
+\end{document}
