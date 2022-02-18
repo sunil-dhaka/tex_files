@@ -1,0 +1,191 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{commath}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{subcaption}
+\restylefloat{table}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{vmargin}  % Administrar márgenes
+\setpapersize{A4} % Definir tamaño del papel
+\setmargins{2.5cm} % Margen izquierdo
+{1cm} % Margen superior
+{16.5cm} % Área de impresión horizontal
+{23.42cm} % Area de impresión vertical
+{15mm} % Encabezado
+{5mm} % Espacio entre el encabezado y el texto
+{10pt} % Pie de página
+{3mm} % Espacio entre el pie de página y el texto
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+\includegraphics[width=4cm,height=1cm]{cropped-iitpal-at-prutor-logo.png}
+}
+\lhead{Determinants | Class XII}
+\rfoot{}
+\begin{document}
+\section{Properties of Determinants}
+\subsection*{Property 1}
+If a determinant has all the elements zero in any row (or column) then its values is zero.
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        0 & 0 & 0 \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+    =0
+\end{equation*}
+
+\subsection*{Property 2}
+Determinant of a diagonal matrix is given by product of its diag entries.
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        a_{11} & 0 & 0 \\
+        0 & a_{22} & 0 \\
+        0 & 0 & a_{33} 
+    \end{vmatrix}
+    =a_{11}a_{22}a_{33}
+\end{equation*}
+\subsection*{Property 3}
+Determinant of a upper or lower triagonal matrix is given by product of its diag entries.
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        0 & a_{22} & a_{23} \\
+        0 & 0 & a_{33} 
+    \end{vmatrix}
+    =a_{11}a_{22}a_{33}
+\end{equation*}
+\subsection*{Property 4}
+The value of a determinant remains unaltered; if the
+rows and columns are interchanged. Basically transpose of a matrix has same determinant.
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+        a_{11} & a_{21} & a_{31} \\
+        a_{12} & a_{22} & a_{32} \\
+        a_{13} & a_{23} & a_{33} 
+    \end{vmatrix}
+\end{equation*}
+\subsection*{Property 5}
+If any two adjacent rows (or columns) of a
+determinant be interchanged, the value of
+determinant is changed in sign only.
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+\end{equation*}
+\begin{equation*}
+    \Delta^{'}=
+    \begin{vmatrix}
+        a_{21} & a_{22} & a_{23} \\
+        a_{11} & a_{12} & a_{13} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+\end{equation*}
+Then we have $\Delta=-\Delta^{'}$.
+
+\subsection*{Property 6}
+If a determinant has any two rows (or columns) identical or proportional, then its values is zero.
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{11} & a_{12} & a_{13} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+    =0
+\end{equation*}
+\subsection*{Property 7}
+If all the elements of any row (or column) be
+multiplied by the same number, then the determinant
+is multiplied by that number.
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+\end{equation*}
+\begin{equation*}
+    \Delta^{'}=
+    \begin{vmatrix}
+        Ka_{11} & Ka_{12} & Ka_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{23} & a_{33} 
+    \end{vmatrix}
+\end{equation*}
+Then we have $\Delta^{'}=K\Delta$.
+\subsection*{Property 8}
+If each element of any row (or column) can be
+expressed as a sum of two terms then the
+determinant can be expressed as the sum of two
+determinants, that means
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        x+a_{11} & y+a_{12} & z+a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+        x & y & z \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+\end{equation*}
+\subsection*{Property 9}
+The value of determinant is not altered by adding to the elements of any row (or column) a constant multiple of the corresponding elements of any other row (or column).\\
+\textbf{Exa: }\\
+$R_1 \rightarrow R_1 + mR_2$ (change R1 as sum of R1 and m (R2).\\
+$R_3 \rightarrow R_3 + nR_2$ (change R3 as sum of R3 and n (R2).
+
+\begin{equation*}
+    \Delta=
+    \begin{vmatrix}
+        a_{11}+ma_{21} & a_{12}+ma_{22} & a_{13}+ma_{23} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} 
+    \end{vmatrix}
+\end{equation*}
+\begin{equation*}
+    \Delta^{'}=
+    \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31}+na_{21} & a_{32}+na_{22} & a_{33}+na_{23} 
+    \end{vmatrix}
+\end{equation*}
+Then this property says, $\Delta=\Delta^{'}$\\
+\textbf{NOTE:} All these properties can be proved just by doing step by step algebra of determinant calculations. Take it as an exercise to prove these results for general form of 3 x 3 matrix.
+\end{document}
