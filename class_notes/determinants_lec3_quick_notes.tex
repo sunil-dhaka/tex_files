@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{commath}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{subcaption}
+\restylefloat{table}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{vmargin}  % Administrar márgenes
+\setpapersize{A4} % Definir tamaño del papel
+\setmargins{2.5cm} % Margen izquierdo
+{1cm} % Margen superior
+{16.5cm} % Área de impresión horizontal
+{23.42cm} % Area de impresión vertical
+{15mm} % Encabezado
+{5mm} % Espacio entre el encabezado y el texto
+{10pt} % Pie de página
+{3mm} % Espacio entre el pie de página y el texto
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+\includegraphics[width=4cm,height=1cm]{cropped-iitpal-at-prutor-logo.png}
+}
+\lhead{Determinants | Class XII}
+\rfoot{}
+\begin{document}
+\section{Adjoint of Matrix}
+For a square matrix adjoint is defined by transpose of the matrix whose entries are corresponding matrix elements' cofactors. Mathematically,
+\begin{equation*}
+    \text{Adj of } \Delta =
+    \begin{bmatrix}
+        C_{11} & C_{12} & C_{13} \\
+        C_{21} & C_{22} & C_{23} \\
+        C_{31} & C_{32} & C_{33} 
+    \end{bmatrix}^{T}
+\end{equation*}
+It can be shown that product sum elements of any row(or column) with cofactors of any \textbf{other} row(or column) is zero. For example,
+\begin{equation*}
+    a_{11}C_{21}+a_{12}C_{22}+a_{13}C_{23}=0
+\end{equation*} 
+\section{Inverse of Matrix using Determinants}
+We will see that Determinants can be used to check existence of matrix inverse and if it exists they can be computed using determinants. It can be shown that,
+\begin{equation}
+    A\frac{Adj(A)}{\Delta_A}=\frac{Adj(A)}{\Delta_A} A =I \text{ IF  } \Delta_A \neq 0 
+\end{equation}
+Here $\Delta_A$ is determinant of matrix A. Using matrix inverse definition from (1) we have,
+\begin{equation*}
+    A^{-1}=\frac{Adj(A)}{\Delta_A} \text{       IF  } \Delta_A \neq 0 
+\end{equation*}
+With determinant and adjoint matrix of A we can compute its inverse, when it exists.
+\section{Determinant of Adjoint Matrix}
+Note that determinant of matrix multiplication is same as multiplication of matrix determinants. 
+\begin{equation*}
+    det(AB)=det(A)det(B)
+\end{equation*}
+Apply this result on eq. (1)
+\begin{align*}
+    det(A)det(Adj(A))=det[det(A)I]
+\end{align*}
+RHS is simple 3 x 3 diagonal matrix. Using property-2 from lec-2 notes,
+\begin{align*}
+    det(A)det(Adj(A))=det(A)det(A)det(A)=det(A)^3\\
+    det(Adj(A))=\frac{det(A)^3}{det(A)}=det(A)^2
+\end{align*}
+For general N x N matrix A,
+\begin{equation*}
+    det(Adj(A))=det(A)^{(N-1)}
+\end{equation*}
+\section{Singular and Non-Singular Matrices}
+When $det(A)=0$, matrix A is classified as singular matrix. And when $det(A) \neq 0$, then matrix A is a non-singular matrix.
+\paragraph{Theorem:}
+Square matrix A has inverse \textbf{iff} matrix A is non-singular i.e. $det(A) \neq 0$.\\
+It means: When determinant is non zero then only inverse of a square matrix exists. OR Only non-singular matrices have inverse.
+\section{Calculating Inverse}
+There are many ways of calculating inverse of matrix. For simple 2 x 2 we have,
+\begin{equation*}
+    A=
+    \begin{vmatrix}
+    a & b\\
+    c &d
+    \end{vmatrix}
+\end{equation*}
+then,
+\begin{equation*}
+    A=
+    \frac{1}{(ad-bc)}
+    \begin{vmatrix}
+    d & -b\\
+    -c & a
+    \end{vmatrix}
+\end{equation*}
+For diagonal matrices simply invert diagonal entries and one has inverse of that matrix. For general case determinant can be used to check for inverse existance. When determinant is non zero then only inverse of a square matrix exists. And if inverse exists then one can use determinants to compute matrx inverse.
+\end{document}
