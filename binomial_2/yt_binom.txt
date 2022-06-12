@@ -1,0 +1,7 @@
+0:00 Binomial Theorem Revision
+3:10 Property-1: Binomial Coefficients
+15:30 Property-2: Binomial Coefficients
+25:24 Property-3: Binomial Coefficients
+38:27 Problem-1: Finding Coefficients 
+48:40 Problem-2: Finding Coefficients
+57:35
